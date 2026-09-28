@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "description": "Учебные данные AI Sana. Контакты и ссылки — примеры, реальные датасеты и прототипы по ним не предоставляются.",
+  "drafts": [
+    {
+      "id": "d1",
+      "task_id": "t1",
+      "text": "У кофейни остаётся выпечка. Есть обезличенные CSV продаж и списаний за 6 месяцев. Нужна панель прогноза закупок на следующий день для управляющего. Срок — 3 недели, без интеграции с кассой. Сравним MAE с прогнозом по среднему за 7 дней. Контакт: coffee@example.com, консультации по вторникам.",
+      "industry": "Ритейл"
+    },
+    {
+      "id": "d2",
+      "task_id": "t2",
+      "text": "Студенты 2–4 курсов пропускают стажировки и гранты. Хотим объединить возможности в каталоге с поиском и фильтрами. Есть синтетические 30 записей, срок две недели, интерфейс на русском. Контакт campus@example.com, созвон раз в неделю. Критерии приёмки пока не определены.",
+      "industry": "Образование"
+    },
+    {
+      "id": "d3",
+      "task_id": "t3",
+      "text": "Жителям трудно найти ближайший пункт приёма вторсырья. Есть открытый список пунктов, но актуальность надо проверить. Хотим карту с фильтрами по материалам. Сроки и порядок связи пока не согласованы.",
+      "industry": "Экология"
+    },
+    {
+      "id": "d4",
+      "task_id": "t4",
+      "text": "Диспетчеры вручную распределяют заказы между курьерами. Хотим сократить время планирования маршрутов. Данные и формат результата ещё не обсуждали.",
+      "industry": "Логистика"
+    },
+    {
+      "id": "d5",
+      "task_id": "t5",
+      "text": "Хотим быстрее отвечать на повторяющиеся вопросы клиентов.",
+      "industry": "Сервисы"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "topic": "Ритейл",
+      "fields": {
+        "title": "Прогноз спроса для небольшой кофейни",
+        "context": "Закупаем выпечку на глаз; к вечеру остаются непроданные позиции.",
+        "need": "Планировать закупки и сократить списания.",
+        "users": "Управляющий и сотрудники кофейни.",
+        "data": "Обезличенные CSV продаж и списаний за 6 месяцев; синтетические примеры доступны для демо.",
+        "constraints": "Прототип за 3 недели; без интеграции с кассой.",
+        "result": "Панель прогноза спроса по категориям на следующий день.",
+        "criteria": "На отложенной выборке MAE ниже, чем у среднего за последние 7 дней.",
+        "contact": "coffee@example.com",
+        "interaction": "Созвон по вторникам, обратная связь в течение двух рабочих дней."
+      },
+      "confirmed": true,
+      "published": true,
+      "score": 100,
+      "level": "Приоритетная",
+      "breakdown": [
+        {
+          "field": "context",
+          "label": "Контекст",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "need",
+          "label": "Потребность",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "data",
+          "label": "Данные и материалы",
+          "max": 20,
+          "points": 20
+        },
+        {
+          "field": "result",
+          "label": "Ожидаемый результат",
+          "max": 15,
+          "points": 15
+        },
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 15
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "users",
+          "label": "Пользователи",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 5
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 5
+        }
+      ],
+      "missing": []
+    },
+    {
+      "id": "t2",
+      "topic": "Образование",
+      "fields": {
+        "title": "Навигатор по университетским возможностям",
+        "context": "Студенты ищут стажировки в разных каналах и пропускают сроки.",
+        "need": "Объединить возможности в одном поиске.",
+        "users": "Студенты 2–4 курсов.",
+        "data": "Синтетический список из 30 стажировок и грантов.",
+        "constraints": "Две недели; интерфейс на русском.",
+        "result": "Каталог с поиском и фильтрами.",
+        "criteria": "",
+        "contact": "campus@example.com",
+        "interaction": "Консультация раз в неделю."
+      },
+      "confirmed": true,
+      "published": true,
+      "score": 85,
+      "level": "Готовая",
+      "breakdown": [
+        {
+          "field": "context",
+          "label": "Контекст",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "need",
+          "label": "Потребность",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "data",
+          "label": "Данные и материалы",
+          "max": 20,
+          "points": 20
+        },
+        {
+          "field": "result",
+          "label": "Ожидаемый результат",
+          "max": 15,
+          "points": 15
+        },
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "users",
+          "label": "Пользователи",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 5
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 5
+        }
+      ],
+      "missing": [
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "topic": "Экология",
+      "fields": {
+        "title": "Карта раздельного сбора отходов",
+        "context": "Жителям трудно найти ближайший пункт приёма.",
+        "need": "Упростить поиск подходящего пункта.",
+        "users": "Жители города.",
+        "data": "Открытый список пунктов, требуется проверить актуальность.",
+        "constraints": "",
+        "result": "Интерактивная карта пунктов и принимаемых материалов.",
+        "criteria": "",
+        "contact": "",
+        "interaction": ""
+      },
+      "confirmed": true,
+      "published": true,
+      "score": 65,
+      "level": "Рабочая",
+      "breakdown": [
+        {
+          "field": "context",
+          "label": "Контекст",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "need",
+          "label": "Потребность",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "data",
+          "label": "Данные и материалы",
+          "max": 20,
+          "points": 20
+        },
+        {
+          "field": "result",
+          "label": "Ожидаемый результат",
+          "max": 15,
+          "points": 15
+        },
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "users",
+          "label": "Пользователи",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 0
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 0
+        }
+      ],
+      "missing": [
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 0
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "topic": "Логистика",
+      "fields": {
+        "title": "Планирование маршрутов доставки",
+        "context": "Диспетчер вручную распределяет заказы между курьерами.",
+        "need": "Сократить время планирования маршрутов.",
+        "users": "Диспетчеры службы доставки.",
+        "data": "",
+        "constraints": "",
+        "result": "",
+        "criteria": "",
+        "contact": "",
+        "interaction": ""
+      },
+      "confirmed": true,
+      "published": true,
+      "score": 30,
+      "level": "Черновик",
+      "breakdown": [
+        {
+          "field": "context",
+          "label": "Контекст",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "need",
+          "label": "Потребность",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "data",
+          "label": "Данные и материалы",
+          "max": 20,
+          "points": 0
+        },
+        {
+          "field": "result",
+          "label": "Ожидаемый результат",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "users",
+          "label": "Пользователи",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 0
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 0
+        }
+      ],
+      "missing": [
+        {
+          "field": "data",
+          "label": "Данные и материалы",
+          "max": 20,
+          "points": 0
+        },
+        {
+          "field": "result",
+          "label": "Ожидаемый результат",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 0
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "topic": "Сервисы",
+      "fields": {
+        "title": "Помощник для службы поддержки",
+        "context": "Хотим быстрее отвечать на повторяющиеся вопросы клиентов.",
+        "need": "",
+        "users": "",
+        "data": "",
+        "constraints": "",
+        "result": "",
+        "criteria": "",
+        "contact": "",
+        "interaction": ""
+      },
+      "confirmed": true,
+      "published": true,
+      "score": 10,
+      "level": "Черновик",
+      "breakdown": [
+        {
+          "field": "context",
+          "label": "Контекст",
+          "max": 10,
+          "points": 10
+        },
+        {
+          "field": "need",
+          "label": "Потребность",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "data",
+          "label": "Данные и материалы",
+          "max": 20,
+          "points": 0
+        },
+        {
+          "field": "result",
+          "label": "Ожидаемый результат",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "users",
+          "label": "Пользователи",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 0
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 0
+        }
+      ],
+      "missing": [
+        {
+          "field": "need",
+          "label": "Потребность",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "data",
+          "label": "Данные и материалы",
+          "max": 20,
+          "points": 0
+        },
+        {
+          "field": "result",
+          "label": "Ожидаемый результат",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "criteria",
+          "label": "Критерии успеха",
+          "max": 15,
+          "points": 0
+        },
+        {
+          "field": "constraints",
+          "label": "Ограничения",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "users",
+          "label": "Пользователи",
+          "max": 10,
+          "points": 0
+        },
+        {
+          "field": "contact",
+          "label": "Контакт",
+          "max": 5,
+          "points": 0
+        },
+        {
+          "field": "interaction",
+          "label": "Формат взаимодействия",
+          "max": 5,
+          "points": 0
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "u1",
+      "name": "Nomad Labs",
+      "interests": "Ритейл, аналитика",
+      "skills": "Анализ данных, UX",
+      "technologies": "Python, pandas"
+    },
+    {
+      "id": "u2",
+      "name": "Qadam",
+      "interests": "Образование, сервисы",
+      "skills": "Frontend, исследования",
+      "technologies": "JavaScript, Figma"
+    },
+    {
+      "id": "u3",
+      "name": "Green Step",
+      "interests": "Экология, карты",
+      "skills": "Геоданные, backend",
+      "technologies": "Python, Leaflet"
+    },
+    {
+      "id": "u4",
+      "name": "Route Makers",
+      "interests": "Логистика, оптимизация",
+      "skills": "Алгоритмы, аналитика",
+      "technologies": "Python, SQL"
+    },
+    {
+      "id": "u5",
+      "name": "Sana Studio",
+      "interests": "Образование, AI",
+      "skills": "NLP, дизайн интерфейсов",
+      "technologies": "Python, JavaScript"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "p1",
+      "task_id": "t1",
+      "team_id": "u1",
+      "idea": "Сравним прогноз спроса со средним за неделю и покажем рекомендованные закупки по категориям.",
+      "plan": "Неделя 1: проверить пропуски в CSV. Неделя 2: сравнить модели по MAE. Неделя 3: собрать панель прогноза.",
+      "duration": "3 недели",
+      "link": "https://example.com/prototypes/nomad-demand",
+      "status": "pending"
+    },
+    {
+      "id": "p2",
+      "task_id": "t1",
+      "team_id": "u5",
+      "idea": "Сделаем калькулятор закупок с простым прогнозом и объяснением факторов сезонности.",
+      "plan": "Согласовать критерии и выборку; построить базовый прогноз; добавить объяснения; показать прототип управляющему.",
+      "duration": "3 недели",
+      "link": "https://example.com/prototypes/sana-purchase",
+      "status": "pending"
+    },
+    {
+      "id": "p3",
+      "task_id": "t2",
+      "team_id": "u2",
+      "idea": "Соберём каталог стажировок с поиском по направлению и фильтром по сроку подачи.",
+      "plan": "Проверить структуру 30 записей; спроектировать карточку; реализовать поиск; согласовать критерии приёмки со студентами и бизнесом.",
+      "duration": "2 недели",
+      "link": "https://example.com/prototypes/qadam-opportunities",
+      "status": "pending"
+    },
+    {
+      "id": "p4",
+      "task_id": "t3",
+      "team_id": "u3",
+      "idea": "Покажем пункты приёма на карте с фильтром по типу материала и отметкой актуальности.",
+      "plan": "Проверить открытые адреса; согласовать географию и сроки; подготовить карту; протестировать поиск пункта.",
+      "duration": "3 недели после уточнения",
+      "link": "https://example.com/prototypes/green-step-map",
+      "status": "pending"
+    },
+    {
+      "id": "p5",
+      "task_id": "t4",
+      "team_id": "u4",
+      "idea": "Начнём с интервью диспетчера и сравним ручное распределение с простым маршрутизатором на синтетических заказах.",
+      "plan": "Уточнить ограничения курьеров; согласовать формат данных; подготовить демонстрационные заказы; показать сравнение маршрутов.",
+      "duration": "4 недели после уточнения",
+      "link": "https://example.com/prototypes/route-makers",
+      "status": "pending"
+    }
+  ]
+}
